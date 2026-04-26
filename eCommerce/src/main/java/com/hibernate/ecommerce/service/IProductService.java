@@ -1,0 +1,1 @@
+package com.hibernate.ecommerce.service;import com.hibernate.ecommerce.dto.ProductDTO;import java.util.List;public interface IProductService {    ProductDTO addProduct(ProductDTO dto);    ProductDTO findProductById(Long id);    List<ProductDTO>findOptionalAll(String filterName);    ProductDTO updateProduct(Long id, ProductDTO dto);    void deleteProduct(Long id);}

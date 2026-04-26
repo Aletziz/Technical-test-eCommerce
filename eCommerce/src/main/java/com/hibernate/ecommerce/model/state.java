@@ -1,0 +1,1 @@
+package com.hibernate.ecommerce.model;public enum state {    PENDIENTE,    ENVIADO,    ENTREGADO,    CANCELADO;}

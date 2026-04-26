@@ -1,0 +1,503 @@
+{
+  "info": {
+    "_postman_id": "4ecd08c8-4b83-40f7-a7df-cf26982a3744",
+    "name": "eCommerceCollection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53126644",
+    "_collection_link": "https://go.postman.co/collection/53126644-4ecd08c8-4b83-40f7-a7df-cf26982a3744?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Client",
+      "item": [
+        {
+          "name": "InsertClient",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Juan Pérez\",\r\n    \"phone\": \"+53 12345678\",\r\n    \"email\": \"juan.perez@example.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/v1/api/client/insert",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "v1",
+                "api",
+                "client",
+                "insert"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findClientbyId",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "localhost:8080/v1/api/client/search/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "v1",
+                "api",
+                "client",
+                "search",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findAllClient",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "localhost:8080/v1/api/client/search",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "v1",
+                "api",
+                "client",
+                "search"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateClient",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Alexis Glez\",\r\n    \"phone\": \"+53 12345679\",\r\n    \"email\": \"alexis.glez@example.com\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8080/v1/api/client/update/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "v1",
+                "api",
+                "client",
+                "update",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteClientById",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/v1/api/client/delete/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "v1",
+                "api",
+                "client",
+                "delete",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Product",
+      "item": [
+        {
+          "name": "insertProduct",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Auriculares Bluetooth Sony\",\r\n    \"description\": \"Auriculares inalámbricos con cancelación de ruido y 30h de batería\",\r\n    \"price\": 119.99,\r\n    \"stock\": 40\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8080/v1/api/product/insert",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "v1",
+                "api",
+                "product",
+                "insert"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findProductById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "localhost:8080/v1/api/product/search/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "v1",
+                "api",
+                "product",
+                "search",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findFilterOrAll",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "localhost:8080/v1/api/product/search?name=Laptop Gamer GTX",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "v1",
+                "api",
+                "product",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Laptop Gamer GTX"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateProduct",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Smartwatch Xiaomi Mi Band 7\",\r\n    \"description\": \"Monitor de ritmo cardíaco, GPS, notificaciones y resistencia al agua\",\r\n    \"price\": 39.90,\r\n    \"stock\": 200\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/v1/api/product/update/2",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "v1",
+                "api",
+                "product",
+                "update",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteProductById",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Smartwatch Xiaomi Mi Band 7\",\r\n    \"description\": \"Monitor de ritmo cardíaco, GPS, notificaciones y resistencia al agua\",\r\n    \"price\": 39.90,\r\n    \"stock\": 200\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8080/v1/api/product/delete/6",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "v1",
+                "api",
+                "product",
+                "delete",
+                "6"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Order",
+      "item": [
+        {
+          "name": "insertOrder",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"clientId\": 3,\r\n    \"orderdetails\": [\r\n        {\r\n            \"productId\": 1,\r\n            \"price\": 899.99,\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"productId\": 4,\r\n            \"price\": 79.90,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"productId\": 5,\r\n            \"price\": 119.99,\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8080/v1/api/order/insert",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "v1",
+                "api",
+                "order",
+                "insert"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findOrderById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"clientId\": 3,\r\n    \"orderdetails\": [\r\n        {\r\n            \"productId\": 1,\r\n            \"price\": 899.99,\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"productId\": 4,\r\n            \"price\": 79.90,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"productId\": 5,\r\n            \"price\": 119.99,\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8080/v1/api/order/search/2",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "v1",
+                "api",
+                "order",
+                "search",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findOrderByClient",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "localhost:8080/v1/api/order/searchClient/4",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "v1",
+                "api",
+                "order",
+                "searchClient",
+                "4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "changeOrderState",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\":4,\r\n    \"state\": \"ENVIADO\",\r\n    \"clientId\": 3,\r\n    \"orderdetails\": [\r\n        {\r\n            \"productId\": 1,\r\n            \"price\": 899.99,\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"productId\": 4,\r\n            \"price\": 79.90,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"productId\": 6,\r\n            \"price\": 119.99,\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8080/v1/api/order/changeState",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "v1",
+                "api",
+                "order",
+                "changeState"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteOrderById",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "localhost:8080/v1/api/order/delete/3",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "v1",
+                "api",
+                "order",
+                "delete",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

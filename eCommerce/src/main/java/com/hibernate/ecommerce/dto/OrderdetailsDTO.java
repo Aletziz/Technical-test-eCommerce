@@ -1,0 +1,1 @@
+package com.hibernate.ecommerce.dto;import lombok.*;@Getter@Setter@AllArgsConstructor@NoArgsConstructor@Builderpublic class OrderdetailsDTO {    private Long id;    private Long orderId;    private Long productId;    private Double price;    private int quantity;}

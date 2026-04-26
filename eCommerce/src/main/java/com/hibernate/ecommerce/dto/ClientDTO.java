@@ -1,0 +1,1 @@
+package com.hibernate.ecommerce.dto;import jakarta.persistence.Entity;import lombok.*;@Getter@Setter@AllArgsConstructor@NoArgsConstructor@Builderpublic class ClientDTO {    private Long id;    private String name;    private String phone;    private String email;}

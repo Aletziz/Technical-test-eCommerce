@@ -1,0 +1,1 @@
+package com.hibernate.ecommerce.dto;import com.hibernate.ecommerce.model.state;import lombok.*;import java.util.ArrayList;import java.util.List;@Getter@Setter@AllArgsConstructor@NoArgsConstructor@Builderpublic class OrderDTO {    private Long id;    private state state;    private Long clientId;    List<OrderdetailsDTO> orderdetails = new ArrayList<>();}

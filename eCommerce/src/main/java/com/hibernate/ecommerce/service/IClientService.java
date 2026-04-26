@@ -1,0 +1,1 @@
+package com.hibernate.ecommerce.service;import com.hibernate.ecommerce.dto.ClientDTO;import java.util.List;public interface IClientService {    ClientDTO addClient(ClientDTO dto);    ClientDTO findClientById(Long id);    List<ClientDTO> findAllClient();    ClientDTO updateClient(Long id, ClientDTO dto);    void deleteClient(Long id);}
